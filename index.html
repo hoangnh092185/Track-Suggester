@@ -18,7 +18,7 @@
       <div class="form-group">
         <form class="trackSuggester" action="index.html" method="post">
           <div class="">
-            <h1>Lets' get started.</h1>
+            <h1>Lets' get started. Please fill out all the questions below.</h1>
             <div class="jumbotron">
                 <div class="row" id="question1">
                   <label for="">Select one that represent you.</label><br>
@@ -42,42 +42,43 @@
             <div class="row">
               <h3>Which of these describe you?</h3>
               <label id="photos" class="col-md-4" for="">
-                <button id="photoButton1" class="btn btn-default active" type="button" name="innovButton" value="inovative" checked><img class="img-fluid" alt="Responsive image" src="img/innovation.jpg" /></button>
+                <button type="button" name="button"><input type="image" name="imageButton" value="innovation" src="img/innovation.jpg" height="300" width="300" checked></button>
+                <!-- <input type="image" name="imageButton" value="innovation" src="img/innovation.jpg" height="300" width="300" checked> -->
               </label>
               <label id="photos" class="col-md-4" for="">
-                <button id="photoButton2" class="btn btn-default active" type="button" name="boldButton" value="Bold"><img class="img-fluid" alt="Responsive image" src="img/bee-bold.jpg" /></button>
+                <input type="image" name="imageButton" value="bold" src="img/bee-bold.jpg" height="300" width="300" >
               </label>
               <label id="photos" class="col-md-4" for="">
-                <button id="photoButton3" class="btn btn-default" type="button" name="creatButton" value="Creative"><img class="img-fluid" alt="Responsive image" src="img/Creative-3.png" /></button>
-              </label>
-              <label id="hidePhoto" for="">
-                <img id="showPhoto1" src="img/desingnimg1.png" alt="" />
-                <img id="showPhoto2" src="img/drupalimg1.png" alt="" />
-                <img id="showPhoto3" src="img/railsimg1.jpg" alt="" />
+                <input type="image" name="imageButton" value="creative" src="img/Creative-3.png" height="300" width="300" >
               </label>
             </div>
           </div>
           <!-- Question2 Eng -->
           <!-- Question3 Begin -->
           <div class="jumbotron">
-            <div class="question3">
-              <label for="">What coding environment you would preffer?</label>
-              <ul>
-                <li>In a cubical.</li>
-                <li>In open format.</li>
-                <li>At home.</li>
-              </ul>
+            <div class="radio">
+              <h3>What coding environment you would preffer?</h3>
+              <label for="">
+                <input type="radio" name="environment" value="Cubical" checked>In a cubical.
+              </label>
+              <label for="">
+                <input type="radio" name="environment" value="Open format">In open format.
+              </label>
+              <label for="">
+                <input type="radio" name="environment" value="Home">At home.
+              </label>
             </div>
           </div>
           <!-- Question3 End -->
           <!-- Question4 Begin -->
           <div class="jumbotron">
             <div class="question4">
-              <label for="">Working on a project, you would preffered to start:</label>
+              <h3>Finish this statement.</h3>
+              <label for="">Working on a new project, you would preffered start:</label>
               <select class="form-control">
-                <option>from the ground up, with your own design and code.</option>
-                <option>on an existing code and built on top of it to make it better.</option>
-                <option>on an existing code and trouble shoots it.</option>
+                <option>from scratch, and built it to your liking.</option>
+                <option>Built on top of a existing code and make it better.</option>
+                <option>to trouble shooting a finish project and make it errors free.</option>
               </select>
             </div>
           </div>
@@ -86,41 +87,67 @@
           <div class="jumbotron">
             <div class="question5">
               <label for="">Which types of tech industry you see yourself working in.</label>
-              <ul>
-                <li><strong>Start up.</strong></li>
-                <li><strong>Big Corperation.</strong></li>
-                <li><strong>Commision: Self employeed.</strong></li>
-              </ul>
+              <div class="radio">
+                <label for="">
+                  <input type="radio" name="industry" value="start up" checked>Start up.
+                </label>
+                <label for="">
+                  <input type="radio" name="industry" value="big company">Big Corperation.
+                </label>
+                <label for="">
+                  <input type="radio" name="industry" value="yourself">Independent contractor.
+                </label>
+              </div>
             </div>
           </div>
           <!-- Question5 End -->
           <!-- Question6 Begin -->
           <div class="jumbotron">
             <div class="question6">
-              <label for="">Which ratios best describe you?</label>
-              <ul>
-                <li>High paying wages / unsecured job.</li>
-                <li>Average paying wages / low opening position.</li>
-                <li>Low paying wages / job security and high demand.</li>
-              </ul>
+              <div class="radio">
+                <h3>How comfortible are about wages and risk?</h3>
+                <label for="">
+                  <input type="radio" name="wages" value="High risk and high wages" checked>
+                  High paying wages / unsecured job.
+                </label>
+                <label for="">
+                  <input type="radio" name="wages" value="Average risk and medium wages">
+                  High paying wages / unsecured job.
+                </label>
+                <label for="">
+                  <input type="radio" name="wages" value="low risk and low wages">
+                  High paying wages / unsecured job.
+                </label>
+              </div>
             </div>
           </div>
+          <button class="btn btn-default active" type="button" name="submit">Submit</button>
           <!-- Question6 End -->
         </form>
       </div>
     </div>
     <div class="container">
       <div class="jumbotron">
-        <h1>This page is an output</h1>
-        <p>
-          you love <span id="representOutput"></span> and your personality is <span id="personalityOutput"></span>.
-        </p>
-        <p>
-
-        </p>
-        <p id="imgOutput-form">
-          <span id="imgOutput1"></span><h3><strong>and</strong></h3> <span id="imgOutput2"></span>
-        </p>
+        <div class="trackOuput">
+          <h1>Track suggester result.</h1>
+          <p class="lead">
+            You love <span id="representOutput"></span> and your personality is <span id="personalityOutput"></span>. You preffered to work at <span id="environmentOutput"></span> and on project starting <span id="projectOutput"></span>
+          </p>
+          <p>
+            You chose this <span id="industryOutput"></span> and it is simliar to your tolerance of <span id="wageOutput"></span>. The track that best fits you is:
+          </p>
+          <div id="imageClassHidden" accesskey=""class="row">
+            <label class="col-md-4" for="">
+              <img id="classImg1" src="img/railsimg1.jpg" alt=""/>
+            </label>
+            <label class="col-md-4" for="">
+              <img id="classImg2" src="img/drupalimg1.png" alt=""/>
+            </label>
+            <label class="col-md-4" for="">
+              <img id="classImg1" src="img/designimg1.png" alt=""/>
+            </label>
+          </div>
+        </div>
       </div>
     </div>
   </body>
