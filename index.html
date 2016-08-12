@@ -42,8 +42,7 @@
             <div class="row">
               <h3>Which of these describe you?</h3>
               <label id="photos" class="col-md-4" for="">
-                <button type="button" name="button"><input type="image" name="imageButton" value="innovation" src="img/innovation.jpg" height="300" width="300" checked></button>
-                <!-- <input type="image" name="imageButton" value="innovation" src="img/innovation.jpg" height="300" width="300" checked> -->
+                <input type="image" name="imageButton" value="innovation" src="img/innovation.jpg" height="300" width="300" checked>
               </label>
               <label id="photos" class="col-md-4" for="">
                 <input type="image" name="imageButton" value="bold" src="img/bee-bold.jpg" height="300" width="300" >
@@ -121,14 +120,14 @@
               </div>
             </div>
           </div>
-          <button class="btn btn-default active" type="button" name="submit">Submit</button>
+          <button class="btn btn-default active" type="submit" name="submit">Submit</button>
           <!-- Question6 End -->
         </form>
       </div>
     </div>
     <div class="container">
       <div class="jumbotron">
-        <div class="trackOuput">
+        <div id="trackOuput">
           <h1>Track suggester result.</h1>
           <p class="lead">
             You love <span id="representOutput"></span> and your personality is <span id="personalityOutput"></span>. You preffered to work at <span id="environmentOutput"></span> and on project starting <span id="projectOutput"></span>
