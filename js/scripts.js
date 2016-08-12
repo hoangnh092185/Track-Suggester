@@ -1,18 +1,17 @@
 $(document).ready(function(){
 
-  $("button#photoButton1").click(function() {
-    $("#imgOutput1").removeClass();
-    $("#imgOutput1").addClass($());
+  $("button#photo").click(function() {
+    $("#imgOutput1").apprend("#showPhoto1");
   });
 
   $("button#photoButton2").click(function() {
-    $("#imgOutput1").removeClass();
-    $("#imgOutput1").addClass("yellow-background");
+
+    $("#imgOutput1").addClass("#showPhoto2");
   });
 
   $("button#photoButton3").click(function() {
     $("#imgOutput1").removeClass();
-    $("#imgOutput1").addClass("red-background");
+    $("#imgOutput1").addClass("#showPhoto3");
   });
 
 
