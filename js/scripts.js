@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $("form.trackSuggester").submit(function(event){
 
-    var representInput = $("input:checkbox[name=representYou]:checked").val();
+    var representInput = $("input:radio[name=representYou]:checked").val();
     var personalityInput = $("input:image[name=imageButton]:checked").val();
     var environmentInput = $("input:radio[name=environment]:checked").val();
     var workingInput = $("select.form-control").val();
@@ -16,10 +16,11 @@ $(document).ready(function(){
     $("#industryOutput").text(industryInput);
     $("#wageOutput").text(wageInput);
 
-    $("#trackOuput").show();
-    $(".form-group").hidden();
+
     event.preventDefault();
 // closing trackSuggester function.
   });
+  $("#trackOuput").show();
+  $(".form-group").hidden();
 // closing readyfunction.
 });
