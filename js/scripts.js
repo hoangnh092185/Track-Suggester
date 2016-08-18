@@ -18,7 +18,6 @@ $(document).ready(function(){
     $("#trackOuput").show();
     $(".form-group").hidden();
     event.preventDefault();
-// closing trackSuggester function.
+
   });
-// closing readyfunction.
 });
