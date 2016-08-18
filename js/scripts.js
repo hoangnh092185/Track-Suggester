@@ -10,6 +10,7 @@ $(document).ready(function(){
 
     if (representInput === "coding"){
       $("#trackResult").text("PHP/Drupal");
+
     }else if (representInput === "design"){
       $("#trackResult").text("CSS/Design");
     }else {
@@ -23,6 +24,9 @@ $(document).ready(function(){
     $("#industryOutput").text(industryInput);
     $("#wageOutput").text(wageInput);
 
+    $(".resultText").show();
+    $("#showTrImg2").show();
     event.preventDefault();
+
   });
 });

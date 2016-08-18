@@ -10,7 +10,9 @@ form .form-group {
 label #showImage-group {
   display: none;
 }
-
+.resultText {
+  display: none;
+}
 #imgOutput-form {
   padding-left: 20px;
 }
