@@ -1,6 +1,6 @@
 # Track Suggester
 
-## Input forms to connected business logic using Jquery, 8/12/16
+## Connects user inputs to the business logic using Jquery, bootstrap, javascript. 8/12/16
 
 #### By **Nhat Hoang**
 
@@ -10,7 +10,7 @@ Uses html, Javascript, jquery, and bootstrap to create user interface between th
 
 ## Setup/Installation Requirements
 
-* Just need a web browser
+* web browser
 
 ## Technologies Used
 
@@ -19,6 +19,9 @@ Uses html, Javascript, jquery, and bootstrap to create user interface between th
 * Jquery
 * Javascript
 
+##link##
+https://github.com/hoangnh092185/Track-Suggester
+https://github.com/hoangnh092185/Track-Suggester/branches
 ### License
 
 *GPL*
