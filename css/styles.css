@@ -3,28 +3,26 @@ img {
   height: 300px;
 }
 
+form .form-group {
+  display: none;
+}
+
+label #showImage-group {
+  display: none;
+}
+
 #imgOutput-form {
   padding-left: 20px;
 }
 
-#hidePhoto {
-  display: none;
+#showTrImg1 {
+visibility: hidden;
 }
 
-#trackOuput {
-  display.none;
+#showTrImg2 {
+visibility: hidden;
 }
 
-#imageClassHidden {
-  display: none;
-}
-
-#classImg1 {
-  display: none;
-}
-#classImg2 {
-  display: none;
-}
-#classImg3 {
-  display: none;
+#showTrImg3 {
+visibility: hidden;
 }

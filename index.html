@@ -12,25 +12,25 @@
     <div class="container">
       <div class="jumbotron">
         <h1>Welcome</h1>
-        <h3>Now that the intro class is half way finish, it is time to think about which skill path you should take. Below is a short survey that might help choose one from all the coding languages offer at Epicodus.</h3>
+        <h3>Now that the intro class is half way finish, it is time to think about which skill path you should take. Below is a short survey that might help choose one of many coding languages offer at Epicodus.</h3>
       </div>
       <!-- Quesion1 begin -->
       <div class="form-group">
-        <form class="trackSuggester" action="index.html" method="post">
+        <form id="firstForm" class="trackSuggester" action="index.html" method="post">
           <div class="">
             <h1>Lets' get started. Please fill out all the questions below.</h1>
             <div class="jumbotron">
                 <div class="row" id="question1">
-                  <label for="">Select one that represent you.</label><br>
+                  <label for="">Select one that best represent you.</label><br>
                   <ul>
                     <li>
-                      <input type="radio" name="representYou" value="coding" checked><span> I love coding that would make webpage free of errors.</span>
+                      <input id="repInput1"  type="radio" name="representYou" value="coding" checked><span> I love coding that would make webpage free of errors.</span>
                     </li>
                     <li>
-                      <input type="radio" name="representYou" value="design"><span> I love coding that would make webpage looks and feels amazing.</span>
+                      <input id="repInput2" type="radio" name="representYou" value="design"><span> I love coding that would make webpage looks and feels amazing.</span>
                     </li>
                     <li>
-                      <input type="radio" name="representYou" value="content"><span> I love coding that would make webpage full content like videos, pictures, or instant updates.</span>
+                      <input id="repInput3" type="radio" name="representYou" value="content"><span> I love coding that would make webpage full content like videos, pictures, or instant updates.</span>
                     </li>
                 </ul>
               </div>
@@ -40,15 +40,18 @@
           <!-- Question2 Begin -->
           <div class="jumbotron">
             <div class="row">
-              <h3>Which of these describe you?</h3>
+              <h3>Which of these speakout to you?</h3>
               <label id="photos" class="col-md-4" for="">
-                <input type="image" name="imageButton" value="innovation" src="img/innovation.jpg" height="300" width="300" checked>
+                <img src="img/innovation.jpg" height="300" width="300" alt=""/>
+                <input type="radio" name="imageButton" value="innovation"checked>
               </label>
               <label id="photos" class="col-md-4" for="">
-                <input type="image" name="imageButton" value="bold" src="img/bee-bold.jpg" height="300" width="300" >
+                <img src="img/bee-bold.jpg" height="300" width="300" alt=""/>
+                <input type="radio" name="imageButton" value="bold">
               </label>
               <label id="photos" class="col-md-4" for="">
-                <input type="image" name="imageButton" value="creative" src="img/Creative-3.png" height="300" width="300" >
+                <img src="img/Creative-3.png" height="300" width="300" alt=""/>
+                <input type="radio" name="imageButton" value="creative">
               </label>
             </div>
           </div>
@@ -58,13 +61,13 @@
             <div class="radio">
               <h3>What coding environment you would preffer?</h3>
               <label for="">
-                <input type="radio" name="environment" value="Cubical" checked>In a cubical.
+                <input type="radio" name="environment" value="in a grids environments" checked>In a cubical.
               </label>
               <label for="">
-                <input type="radio" name="environment" value="Open format">In open format.
+                <input type="radio" name="environment" value="in a open format">In open format.
               </label>
               <label for="">
-                <input type="radio" name="environment" value="Home">At home.
+                <input type="radio" name="environment" value="at home">At home.
               </label>
             </div>
           </div>
@@ -128,24 +131,32 @@
     <div class="container">
       <div class="jumbotron">
         <div id="trackOuput">
-          <h1>Track suggester result.</h1>
-          <p class="lead">
-            You love <span id="representOutput"></span> and your personality is <span id="personalityOutput"></span>. You preffered to work at <span id="environmentOutput"></span> and on project starting <span id="projectOutput"></span>
-          </p>
-          <p>
-            You chose this <span id="industryOutput"></span> and it is simliar to your tolerance of <span id="wageOutput"></span>. The track that best fits you is:
-          </p>
-          <div id="imageClassHidden" accesskey=""class="row">
-            <label class="col-md-4" for="">
-              <img id="classImg1" src="img/railsimg1.jpg" alt=""/>
-            </label>
-            <label class="col-md-4" for="">
-              <img id="classImg2" src="img/drupalimg1.png" alt=""/>
-            </label>
-            <label class="col-md-4" for="">
-              <img id="classImg1" src="img/designimg1.png" alt=""/>
-            </label>
-          </div>
+          <form id="formOutput" action="index.html" method="post">
+            <h1>Track suggester result.</h1>
+            <p class="lead">
+              You love <span id="representOutput"></span> and your interest is <span id="personalityOutput"></span>. You like to work <span id="environmentOutput"></span> and preffered starting a project <span id="projectOutput"></span>
+            </p>
+            <p>
+              You chose this <span id="industryOutput"></span> and it is simliar to your tolerance of <span id="wageOutput"></span>. The track that best fits you is: <span><h3 id="trackResult"></h3></span>
+            </p>
+            <div class="row">
+              <label class="col-md-4" for="">
+                <p id="showTrImg1">
+                  <img  src="img/railsimg1.jpg" alt="" />
+                </p>
+              </label>
+              <label class="col-md-4" for="">
+                <p id="showTrImg2">
+                  <img id="showTrImg2" src="img/drupalimg1.png" alt="" />
+                </p>
+              </label>
+              <label class="col-md-4" for="">
+                <p id="showTrImg3">
+                  <img id="showTrImg3" src="img/designimg1.png" alt="" />
+                </p>
+              </label>
+            </div>
+          </form>
         </div>
       </div>
     </div>
