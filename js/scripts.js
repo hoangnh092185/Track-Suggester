@@ -5,10 +5,7 @@ var wordsHolder5;
 var wordsHolder6;
 var resultHolder;
 var resultHolder1 = [];
-var count1;
-var count2;
-var count3;
-var countHolder;
+
 function wordsHolder1(input) {
   if (input == "coding"){
     wordsHolder1 = "c";
@@ -71,18 +68,6 @@ function wordsHolder6(input) {
     resultHolder1.push("T")
   }
 }
-console.log(resultHolder1);
-
-
-// var patt1 = /[C]/g;
-// var count1 = resultOutput.match(patt1);
-// var patt2 = /[D]/g;
-// var count2 = resultOutput.match(patt2);
-// var patt3 = /[T]/g;
-// var count3 = resultOutput.match(patt3);
-// console.log(count1 + " " + count2 + " " + count3);
-
-
 $(document).ready(function(){
   $("form.trackSuggester").submit(function(event){
 
@@ -99,8 +84,7 @@ $(document).ready(function(){
     wordsHolder5(industryInput);
     wordsHolder6(wageInput);
 
-    resultOutput = (wordsHolder1 + wordsHolder2 + wordsHolder3 + wordsHolder6 + wordsHolder6);
-    console.log(resultOutput);
+    resultOutput = (wordsHolder1 + wordsHolder2 + wordsHolder3 + wordsHolder6 + wordsHolder6 + "c" + "d" + "t");
 
       var patt1 = /[c]/g;
       var count1 = resultOutput.match(patt1);
@@ -108,7 +92,18 @@ $(document).ready(function(){
       var count2 = resultOutput.match(patt2);
       var patt3 = /[t]/g;
       var count3 = resultOutput.match(patt3);
-    console.log(count1 + " " + count2 + " " + count3);
+
+      rCHolder = count1.length;
+      rDHolder = count2.length;
+      rTHolder = count3.length;
+
+    if (rCHolder > rDHolder && rCHolder > rTHolder){
+      $("#trackResult").text("PHP/Drupal");
+    }else if (rDHolder > rCHolder && rDHolder > rTHolder){
+      $("#trackResult").text("CSS/Design");
+    }else  {
+      $("#trackResult").text("Ruby/Rail");
+    }
 
     $("#representOutput").text(representInput);
     $("#personalityOutput").text(personalityInput);
